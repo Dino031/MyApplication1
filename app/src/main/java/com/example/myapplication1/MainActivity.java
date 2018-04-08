@@ -60,8 +60,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickOperator(View v) {
+        if (display == "" & result == "") return;
         Button b = (Button) v;
-
         if (opS) {
             op = b.getText().toString();
             if (result == "") {
@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickEqual(View v) {
-        if (display == "" || hDisplay == "") return;
+        if (display == "" || hDisplay == "" || op == "") return;
         num2 = Double.parseDouble(hDisplay);
 
         switch (op) {
@@ -127,6 +127,7 @@ public class MainActivity extends AppCompatActivity {
         display = "";
         result = "";
         hDisplay = "";
+        op="";
         opS = true;
     }
 
