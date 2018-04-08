@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private String result = "";
     private String op = "";
     private double num1, num2, num3;
-    private boolean opS = true, bPoint = true;
+    private boolean opS = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
